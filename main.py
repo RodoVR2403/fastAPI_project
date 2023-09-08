@@ -33,3 +33,17 @@ async def root():
 @app.get("/api/v1/users")
 async def fetch_users():
     return db;
+
+#With this we can register new users
+@app.post("/api/v1/users")
+async def register_user(user: User):
+    db.append(user)
+    return {"id": user.id}
+
+#With this one, we can delete a user
+@app.delete("/api/v1/users/{user_id}")
+async def delete_user(user_id: UUID):
+    for user in db:
+        if user.id == user_id:
+            db.remove(user)
+            return
