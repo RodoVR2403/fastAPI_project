@@ -5,10 +5,10 @@ from uuid import UUID, uuid4
 
 
 app = FastAPI()
-
+#Here we are adding the DB part that will be showed in localhost:8000/api/v1/users
 db: List[User] = [
     User(
-        id=uuid4(), 
+        id=UUID("bc9a22e2-bbc0-4203-a559-65e2579985c3"), 
         first_name="Juanita", 
         middle_name="H",
         last_name="Perez",
@@ -17,7 +17,7 @@ db: List[User] = [
     ),
        
     User(
-        id=uuid4(), 
+        id=UUID("539671f2-6b98-47ca-9a54-9f0e47e073f1"), 
         first_name="Rodolfo", 
         middle_name="J",
         last_name="Vargas",
