@@ -52,3 +52,6 @@ async def delete_user(user_id: UUID):
         status_code=404,
         detail=f"user with id: {user_id} does not exists"
     )
+
+@app.put("/api/v1/users")
+async def change_user()
