@@ -5,6 +5,24 @@ You can use postman in order to send this requests, or in case you are using it 
 
 
 
+
+
+*How can you run this project?:*
+
+In a machine with Docker installed, run the following commands:
+
+Build the image described in the Dockerfile:
+
+1.- docker build -t my-fastapi-app .
+
+And then run a container of the created image:
+
+2.-docker run -d -p 8000:8000 my-fastapi-app
+
+
+
+
+
 USEFUL INFO:
 --------------------------------------------------------------------------------------------------------------------------------
 
